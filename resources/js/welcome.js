@@ -1,19 +1,40 @@
 $("header").addClass('d-none');
+$('button#menuBtn').addClass('d-none');
 
 
 $(document).ready(function () {
 
+    var headerSection = $("header");
+    var menuBtn = $('button#menuBtn');
+    var topScrollSection = $("section.description").offset();
+    topScrollSection = topScrollSection.top;
 
-    $(window).scroll(function () {
+
+    // check position of section header for show header
+    $(window).on('scroll', function () {
 
         var scroll = $(window).scrollTop();
         var w = window.innerWidth;
 
-        if ((scroll < 1116 && w > 400) || (scroll < 1668 && w <= 400)){
-            $("header").addClass('d-none');
+        if (scroll < topScrollSection){
+
+            headerSection.addClass('d-none');
+            menuBtn.addClass('d-none');
+
         } else {
-            $("header").removeClass('d-none');
+
+            headerSection.removeClass('d-none');
+            menuBtn.removeClass('d-none');
+
         }
+
+    });
+
+
+    // toggle of card description
+    $("button").on('click', function() {
+
+        $(this).parent().toggleClass("open");
 
     });
 

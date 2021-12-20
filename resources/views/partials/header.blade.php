@@ -1,10 +1,10 @@
 <header>
-    <nav class="navbar navbar-light bg-light fixed-top mb-5">
+    <nav class="navbar navbar-light fixed-top mb-5">
       <div class="container-fluid">
         <a class="navbar-brand" href="{{ url('/') }}">
             <img src="{{asset('storage/logoDogCrew.jpg')}}" alt="Logo">
         </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+        <button id="menuBtn" class="navbar-toggler d-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">

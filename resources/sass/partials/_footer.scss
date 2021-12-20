@@ -1,0 +1,38 @@
+footer{
+    height: 150px;
+    background-color: $card_color_blue;
+    color: $text_grey;
+
+    .footer_container{
+        width: 93%;
+        text-align: center;
+        margin: auto;
+
+        p{
+            padding-top: 25px;
+        }
+        
+        img{
+            height: 30px;
+        }
+        
+        ul{
+            padding-left: 0;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            margin-bottom: 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            
+            li{
+                list-style: none;
+                padding-bottom: 10px;
+             
+                a{
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}

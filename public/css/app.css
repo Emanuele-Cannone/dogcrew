@@ -11282,6 +11282,13 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Ubuntu", sans-serif;
+}
+
 .mt_120 {
   margin-top: 120px;
 }
@@ -11289,14 +11296,55 @@ textarea.form-control-lg {
 header a.navbar-brand img {
   height: 80px;
 }
+header .container-fluid a img, header .container-sm a img, header .container-md a img, header .container-lg a img, header .container-xl a img, header .container-xxl a img {
+  border-radius: 50%;
+}
+header .navbar-toggler {
+  background-color: #f3feff;
+}
+
+footer {
+  height: 150px;
+  background-color: #09203f;
+  color: #ddd;
+}
+footer .footer_container {
+  width: 93%;
+  text-align: center;
+  margin: auto;
+}
+footer .footer_container p {
+  padding-top: 25px;
+}
+footer .footer_container img {
+  height: 30px;
+}
+footer .footer_container ul {
+  padding-left: 0;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+footer .footer_container ul li {
+  list-style: none;
+  padding-bottom: 10px;
+}
+footer .footer_container ul li a {
+  text-decoration: none;
+}
 
 #welcomePage {
-  @import url("https://www.facebook.com/photo/?fbid=250803020384080&set=a.207415884722794");
+  font-family: "Ubuntu", sans-serif;
+  /* SLIDER EFFECT */
+  /* CARD */
 }
 #welcomePage section.header {
-  height: 200vh;
+  height: 185vh;
 }
-#welcomePage .welcome_container {
+#welcomePage section.header .welcome_container {
   /* hide fixed overflow contents */
   clip: rect(0, auto, auto, 0);
   /* does not work if overflow = visible */
@@ -11310,12 +11358,12 @@ header a.navbar-brand img {
   /* safari hack */
   -webkit-mask-image: -webkit-linear-gradient(top, #ffffff 0%, #ffffff 100%);
 }
-#welcomePage .container_solid {
-  background: white;
+#welcomePage section.header .container_solid {
+  background: #7e8fa4;
   /* position this container at the top of its parent element */
   top: 0;
 }
-#welcomePage .title_wrapper {
+#welcomePage section.header .title_wrapper {
   position: fixed;
   display: block;
   margin: auto;
@@ -11324,19 +11372,17 @@ header a.navbar-brand img {
   top: 50%;
   transform: translateY(-50%);
 }
-#welcomePage .title_wrapper h1, #welcomePage .title_wrapper .h1 {
-  text-align: center;
+#welcomePage section.header .title_wrapper h1, #welcomePage section.header .title_wrapper .h1 {
   font-size: 64px;
-  text-transform: uppercase;
-  text-align: center;
-  font-family: "Fraunces", serif;
-  font-weight: 900;
+  font-family: "Sen", sans-serif;
 }
-#welcomePage .container_solid .title_wrapper h1, #welcomePage .container_solid .title_wrapper .h1 {
+#welcomePage section.header .container_solid .title_wrapper h1, #welcomePage section.header .container_solid .title_wrapper .h1 {
   /* the text background */
-  background: url(https://www.facebook.com/photo/?fbid=250803020384080&set=a.207415884722794);
-  background-size: 100vw auto;
-  background-position: center;
+  text-align: center;
+  background-image: url(/images/landing.jpg?ae1b9f284e61ca61f39483e8ae104c74);
+  background-position: right;
+  background-size: cover;
+  background-repeat: no-repeat;
   /* clip the text is possible */
   text-fill-color: transparent;
   -webkit-text-fill-color: transparent;
@@ -11345,27 +11391,317 @@ header a.navbar-brand img {
   /* fallback text color */
   color: black;
 }
-#welcomePage .container_image {
+#welcomePage section.header .container_image {
   /* Grab a free image from unsplash */
-  background-image: url(https://www.facebook.com/photo/?fbid=250803020384080&set=a.207415884722794);
-  background-size: 100vw auto;
-  background-position: center;
+  background-image: url(/images/landing.jpg?ae1b9f284e61ca61f39483e8ae104c74);
   background-attachment: fixed;
+  background-position: right;
+  background-size: cover;
+  background-repeat: no-repeat;
   /* position the second container below the first container */
   top: 100vh;
 }
-#welcomePage .container_image .title_wrapper h1, #welcomePage .container_image .title_wrapper .h1 {
-  color: white;
+#welcomePage section.header .container_image .title_wrapper h1, #welcomePage section.header .container_image .title_wrapper .h1 {
+  color: #ddd;
 }
-#welcomePage section {
-  min-height: 100vh;
-  padding: 2em;
+#welcomePage .logo_section {
+  background: linear-gradient(to bottom, #f3feff 0%, #fff 100%);
+}
+#welcomePage .logo_section img {
+  padding-top: 20px;
+  border-radius: 50%;
+  height: 300px;
+}
+#welcomePage section.description {
+  padding: 7em 0;
   margin: auto;
-  max-width: 800px;
+  width: 93%;
 }
-#welcomePage section h2, #welcomePage section .h2 {
-  font-family: "Fraunces", serif;
+#welcomePage section.description .body_description p:nth-child(1) {
+  margin-top: 35px;
 }
-#welcomePage section p {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+#welcomePage section.description .body_description p:last-child {
+  margin-top: 25px;
+}
+#welcomePage section.card_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  perspective: 800px;
+  background-image: linear-gradient(to top, #09203fd4 0%, #5378958a 100%);
+  padding: 40px 0px;
+  font-family: "Poppins", sans-serif;
+  transition: all 1s cubic-bezier(0.59, -0.43, 0.17, 1.16);
+}
+#welcomePage section.card_container .comunication .figure .img {
+  background: url(/images/classi_comunicazione_home.jpg?a069437cf65d47d0844e545dad58b403);
+}
+#welcomePage section.card_container .comunication .figure .figcaption span:first-child {
+  font-size: 31px;
+  top: 12px;
+  left: 4px;
+}
+#welcomePage section.card_container .comunication .figure.open .figcaption span:nth-child(1) {
+  top: -26px;
+}
+#welcomePage section.card_container .events .figure .img {
+  background: url(/images/eventi_home.jpg?7d5fc7c7727ddf77ab30d720da0a4293);
+}
+#welcomePage section.card_container .events .figure .figcaption span:first-child {
+  left: 36%;
+  top: 4%;
+}
+#welcomePage section.card_container .events .figure.open .figcaption span:nth-child(1) {
+  top: -34px;
+}
+#welcomePage section.card_container .workshops .figure .img {
+  background: url(/images/seminari_home.jpg?4ffcc868e8cf4bbc5edc544187114867);
+}
+#welcomePage section.card_container .workshops .figure .figcaption span:first-child {
+  left: 31%;
+  top: 4%;
+}
+#welcomePage section.card_container .workshops .figure .figcaption span:first-child.open:nth-child(1) {
+  top: -34px;
+}
+#welcomePage section.card_container .workshops .figure .figcaption span.last_description {
+  padding: 20px;
+}
+#welcomePage section.card_container .workshops .figure.open .figcaption span:nth-child(1) {
+  top: -34px;
+}
+#welcomePage section.card_container .blog .figure .img {
+  background: url(/images/blog_home.jpg?d99befd7f77d10304a70d816415cd5ce);
+}
+#welcomePage section.card_container .blog .figure .figcaption span:first-child {
+  left: 40%;
+  top: 4%;
+}
+#welcomePage section.card_container .blog .figure .figcaption span:first-child.open:nth-child(1) {
+  top: -34px;
+}
+#welcomePage section.card_container .blog .figure .figcaption span.last_description {
+  padding: 20px;
+  margin-top: 23px;
+}
+#welcomePage section.card_container .blog .figure.open .figcaption span:nth-child(1) {
+  top: -34px;
+}
+#welcomePage section.card_container .comunication .figure,
+#welcomePage section.card_container .events .figure,
+#welcomePage section.card_container .workshops .figure,
+#welcomePage section.card_container .blog .figure {
+  width: 350px;
+  margin: 50px auto;
+  box-shadow: 3px 3px 40px 0 rgba(0, 0, 0, 0.4);
+  border-radius: 8px;
+  position: relative;
+  pointer-events: none;
+  background: #ecf0f1;
+  transition: 0.3s ease-in-out;
+}
+#welcomePage section.card_container .comunication .figure .img,
+#welcomePage section.card_container .events .figure .img,
+#welcomePage section.card_container .workshops .figure .img,
+#welcomePage section.card_container .blog .figure .img {
+  width: 100%;
+  height: 200px;
+  border-radius: 8px 8px 0 0;
+  background-size: 350px auto;
+  background-repeat: no-repeat;
+  transition: 0.3s ease-in-out;
+}
+#welcomePage section.card_container .comunication .figure .img:after,
+#welcomePage section.card_container .events .figure .img:after,
+#welcomePage section.card_container .workshops .figure .img:after,
+#welcomePage section.card_container .blog .figure .img:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 150px;
+  background: linear-gradient(transparent, #ecf0f1 44%);
+  border-radius: 0 0 8px 8px;
+}
+#welcomePage section.card_container .comunication .figure .figcaption,
+#welcomePage section.card_container .events .figure .figcaption,
+#welcomePage section.card_container .workshops .figure .figcaption,
+#welcomePage section.card_container .blog .figure .figcaption {
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  position: relative;
+  overflow: visible;
+  background: #ecf0f1;
+  border-radius: 0 0 8px 8px;
+  transition: all 1s cubic-bezier(0.59, -0.43, 0.17, 1.16);
+}
+#welcomePage section.card_container .comunication .figure .figcaption span,
+#welcomePage section.card_container .events .figure .figcaption span,
+#welcomePage section.card_container .workshops .figure .figcaption span,
+#welcomePage section.card_container .blog .figure .figcaption span {
+  width: 100%;
+  transition: all 1s cubic-bezier(0.59, -0.43, 0.17, 1.16);
+}
+#welcomePage section.card_container .comunication .figure .figcaption span:nth-child(1),
+#welcomePage section.card_container .events .figure .figcaption span:nth-child(1),
+#welcomePage section.card_container .workshops .figure .figcaption span:nth-child(1),
+#welcomePage section.card_container .blog .figure .figcaption span:nth-child(1) {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 500;
+  overflow: visible;
+  position: absolute;
+  font-size: 36px;
+  transform: rotate(-3deg);
+  white-space: nowrap;
+  color: #09203f;
+  z-index: 10;
+  text-shadow: 0 0 50px rgba(255, 255, 255, 0.2);
+  transition: top 0.3s ease-in-out;
+}
+#welcomePage section.card_container .comunication .figure .figcaption span:nth-child(1).title_wr,
+#welcomePage section.card_container .events .figure .figcaption span:nth-child(1).title_wr,
+#welcomePage section.card_container .workshops .figure .figcaption span:nth-child(1).title_wr,
+#welcomePage section.card_container .blog .figure .figcaption span:nth-child(1).title_wr {
+  font-size: 31px;
+}
+#welcomePage section.card_container .comunication .figure .figcaption span:nth-child(2),
+#welcomePage section.card_container .events .figure .figcaption span:nth-child(2),
+#welcomePage section.card_container .workshops .figure .figcaption span:nth-child(2),
+#welcomePage section.card_container .blog .figure .figcaption span:nth-child(2) {
+  opacity: 0;
+  height: 20px;
+  overflow: hidden;
+  cursor: text;
+}
+#welcomePage section.card_container .comunication .figure .figcaption span:nth-child(2):not(.last_description),
+#welcomePage section.card_container .events .figure .figcaption span:nth-child(2):not(.last_description),
+#welcomePage section.card_container .workshops .figure .figcaption span:nth-child(2):not(.last_description),
+#welcomePage section.card_container .blog .figure .figcaption span:nth-child(2):not(.last_description) {
+  padding: 0 20px;
+}
+#welcomePage section.card_container .comunication .figure button,
+#welcomePage section.card_container .events .figure button,
+#welcomePage section.card_container .workshops .figure button,
+#welcomePage section.card_container .blog .figure button {
+  position: absolute;
+  bottom: -10px;
+  width: 130px;
+  left: calc(50% - 65px);
+  background: #2c3e50;
+  color: #fff;
+  border: 0;
+  height: 35px;
+  border-radius: 4px;
+  transform: rotate(3deg);
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  pointer-events: auto;
+  transition: 0.3s ease-in-out;
+  overflow: hidden;
+  z-index: 20;
+  font-family: "Ubuntu", sans-serif;
+}
+#welcomePage section.card_container .comunication .figure button:focus,
+#welcomePage section.card_container .events .figure button:focus,
+#welcomePage section.card_container .workshops .figure button:focus,
+#welcomePage section.card_container .blog .figure button:focus {
+  outline: 0;
+}
+#welcomePage section.card_container .comunication .figure button:before,
+#welcomePage section.card_container .events .figure button:before,
+#welcomePage section.card_container .workshops .figure button:before,
+#welcomePage section.card_container .blog .figure button:before {
+  content: "more";
+  position: absolute;
+  top: 8px;
+  left: 44px;
+  opacity: 1;
+  transition: all 1s cubic-bezier(0.55, -0.62, 0.27, 1.2);
+}
+#welcomePage section.card_container .comunication .figure button:after,
+#welcomePage section.card_container .events .figure button:after,
+#welcomePage section.card_container .workshops .figure button:after,
+#welcomePage section.card_container .blog .figure button:after {
+  content: "back";
+  opacity: 0;
+  top: 8px;
+  left: 0;
+  position: absolute;
+  transition: all 1s cubic-bezier(0.55, -0.62, 0.27, 1.2);
+}
+#welcomePage section.card_container .comunication .figure:hover,
+#welcomePage section.card_container .events .figure:hover,
+#welcomePage section.card_container .workshops .figure:hover,
+#welcomePage section.card_container .blog .figure:hover {
+  transition: 0.3s ease-in-out;
+  transform: rotateX(-2deg);
+  box-shadow: 3px -3px 40px 0 rgba(0, 0, 0, 0.4);
+}
+#welcomePage section.card_container .comunication .figure:hover button,
+#welcomePage section.card_container .events .figure:hover button,
+#welcomePage section.card_container .workshops .figure:hover button,
+#welcomePage section.card_container .blog .figure:hover button {
+  background: #4f6780;
+  bottom: -13px;
+  transition: 0.3s ease-in-out;
+}
+#welcomePage section.card_container .comunication .figure:hover span:nth-child(1),
+#welcomePage section.card_container .events .figure:hover span:nth-child(1),
+#welcomePage section.card_container .workshops .figure:hover span:nth-child(1),
+#welcomePage section.card_container .blog .figure:hover span:nth-child(1) {
+  top: -39px;
+  transition: top 0.3s ease-in-out;
+}
+#welcomePage section.card_container .comunication .figure.open .img,
+#welcomePage section.card_container .events .figure.open .img,
+#welcomePage section.card_container .workshops .figure.open .img,
+#welcomePage section.card_container .blog .figure.open .img {
+  height: 0;
+}
+#welcomePage section.card_container .comunication .figure.open .figcaption,
+#welcomePage section.card_container .events .figure.open .figcaption,
+#welcomePage section.card_container .workshops .figure.open .figcaption,
+#welcomePage section.card_container .blog .figure.open .figcaption {
+  height: 280px;
+  border-radius: 8px;
+}
+#welcomePage section.card_container .comunication .figure.open .figcaption span:nth-child(2),
+#welcomePage section.card_container .events .figure.open .figcaption span:nth-child(2),
+#welcomePage section.card_container .workshops .figure.open .figcaption span:nth-child(2),
+#welcomePage section.card_container .blog .figure.open .figcaption span:nth-child(2) {
+  height: 100%;
+  opacity: 1;
+}
+#welcomePage section.card_container .comunication .figure.open .figcaption span:nth-child(2):not(.last_description),
+#welcomePage section.card_container .events .figure.open .figcaption span:nth-child(2):not(.last_description),
+#welcomePage section.card_container .workshops .figure.open .figcaption span:nth-child(2):not(.last_description),
+#welcomePage section.card_container .blog .figure.open .figcaption span:nth-child(2):not(.last_description) {
+  padding: 50px 20px 220px 20px;
+}
+#welcomePage section.card_container .comunication .figure.open button:before,
+#welcomePage section.card_container .events .figure.open button:before,
+#welcomePage section.card_container .workshops .figure.open button:before,
+#welcomePage section.card_container .blog .figure.open button:before {
+  opacity: 0;
+  left: 100%;
+}
+#welcomePage section.card_container .comunication .figure.open button:after,
+#welcomePage section.card_container .events .figure.open button:after,
+#welcomePage section.card_container .workshops .figure.open button:after,
+#welcomePage section.card_container .blog .figure.open button:after {
+  opacity: 1;
+  left: 47px;
+}
+#welcomePage section.card_container .comunication .figure.open:hover .figcaption span:nth-child(1),
+#welcomePage section.card_container .events .figure.open:hover .figcaption span:nth-child(1),
+#welcomePage section.card_container .workshops .figure.open:hover .figcaption span:nth-child(1),
+#welcomePage section.card_container .blog .figure.open:hover .figcaption span:nth-child(1) {
+  top: -15px;
+  transition: top 0.3s ease-in-out;
 }

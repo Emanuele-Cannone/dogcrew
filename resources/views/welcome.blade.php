@@ -16,20 +16,112 @@
       <!-- Second container -->
       <div class="welcome_container container_image" aria-hidden="true">
         <div class="title_wrapper">
-          <h1 class="text-capitalize">dog crew asd</h1>
+      </div>
+    </section>
+
+    {{-- logo --}}
+    <div class="d-flex justify-content-center logo_section">
+      <img src="{{asset('storage/logoDogCrew.jpg')}}" alt="Logo">
+    </div>
+
+    <section class="description">
+      <h1 class="text-capitalize">simone piacentini</h1>
+      <div class="body_description">
+        <p>Dog Crew è una grande famiglia da tanti anni ormai, pronta a mettersi in discussione ma anche a far sentire la voce di ogni singolo membro!</p>
+        <p>Non siamo perfetti, ci sono sfumature che occorre cogliere e osservare senza avere la necessità di valutare e rendere nostre, c'è bisogno di saper STARE, di saper VIVERE questi momenti insieme come una vera Crew.</p>
+        <p>In questo lavoro ci sono percorsi che hanno un inizio e una fine ed altri che si tramutano in qualcosa di duraturo, pronti a scoprirsi nel tempo, legami importanti, collaborazioni, amicizie.</p>
+        <p>Non importa la destinazione di un viaggio se il durante non è stato ricco di emozioni...</p>
+        <p><span class="text-capitalize">simone piacentini</span> istruttore Cinofilo SIUA e tecnico mobility</p>
+      </div>
+    </section>
+
+    <section class="card_container">
+
+      {{-- comunication --}}
+      <div class="comunication">
+        <div class="figure">
+          <div class="img"></div>
+          
+          <div class="figcaption">
+            <span class="title_wr">Classi di Comunicazione</span>
+            <span>
+              <p>
+                Comunicare non è solo un dare e avere, è un filo sottile e fragile tra due individui.
+              </p>
+              <p>
+                Tanti nuovi spunti su cui riflettere, tempo, pazienza e il continuo mettersi in gioco anche nei momenti più difficili sono il segreto per migliorarsi e riuscire a vedersi allo specchio per come si è realmente!
+              </p>
+            </span>
+          </div>
+          
+          <button></button>
+        </div>
+      </div>
+
+      {{-- events --}}
+      <div class="events">
+        <div class="figure">
+          <div class="img"></div>
+          
+          <div class="figcaption">
+            <span  class="text-capitalize">eventi</span>
+            <span>
+              <p>
+                Un gruppo misto, un percorso impegnativo per alcuni versi,nuove scoperte e tantissime risate!
+              </p>
+              <p>
+                Attività come il dog trekking se ben organizzate e studiate possono essere dei momenti costruttivi per tutti,di quelli che possono lasciare il segno!
+              </p>
+            </span>
+          </div>
+          
+          <button></button>
+        </div>
+      </div>
+
+      {{-- whorkshops --}}
+      <div class="workshops">
+        <div class="figure">
+          <div class="img"></div>
+          
+          <div class="figcaption">
+            <span  class="text-capitalize">seminari</span>
+            <span class="last_description">
+              <p>
+                Di cosa si tratta? Lo scoprirete partecipando ma un po' di spoiler è di dovere!
+              </p>
+              <p>
+                Due giorni dove andremo ad osservare, analizzare, aggiungere, togliere, guidare i rami della vostra crescita. Un nuovo modo di vedere la nostra relazione insieme a loro, i protagonisti di ogni iniziativa che intraprendiamo... i cani!
+              </p>
+            </span>
+          </div>
+          
+          <button></button>
+        </div>
+      </div>
+
+      {{-- blog --}}
+      <div class="blog">
+        <div class="figure">
+          <div class="img"></div>
+          
+          <div class="figcaption">
+            <span class="text-capitalize">blog</span>
+            <span class="last_description">
+              <p>
+                Voglio ringraziare ognuno di voi per la tenacia, la passione, la voglia che avete sempre di condividere e vivere insieme a me!
+              </p>
+              <p>
+                Qui troverete consigli e spunti derivanti dall'esperienza e dal volermi mettere in gioco ogni giorno! 
+              </p>
+            </span>
+          </div>
+          
+          <button></button>
         </div>
       </div>
 
     </section>
-
-    <section>
-      <h2>Lorem ipsum dolor sit amet.</h2>
-      <p>Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-      <p>
-        Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?
-      </p>
-    </section>
-  </div>
   
   <script src="{{ asset('js/welcome.js') }}"></script>
 
