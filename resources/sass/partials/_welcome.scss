@@ -361,21 +361,21 @@
                 }
 
                 // hover effect
-                &:hover {
-                    transition: 0.3s ease-in-out;
-                    transform: rotateX(-2deg);
-                    box-shadow: 3px -3px 40px 0 rgba(0, 0, 0, 0.4);
+                // &:hover {
+                //     transition: 0.3s ease-in-out;
+                //     transform: rotateX(-2deg);
+                //     box-shadow: 3px -3px 40px 0 rgba(0, 0, 0, 0.4);
 
-                    button {
-                        background: #4f6780;
-                        bottom: -13px;
-                        transition: 0.3s ease-in-out;
-                    }
-                    span:nth-child(1) {
-                        top: -39px;
-                        transition: top 0.3s ease-in-out;
-                    }
-                }
+                //     button {
+                //         background: #4f6780;
+                //         bottom: -13px;
+                //         transition: 0.3s ease-in-out;
+                //     }
+                //     span:nth-child(1) {
+                //         top: -39px;
+                //         transition: top 0.3s ease-in-out;
+                //     }
+                // }
 
                 // when open
                 &.open {
@@ -408,15 +408,15 @@
                         }
                     }
 
-                    // when open and hover
-                    &:hover {
-                        .figcaption {
-                            span:nth-child(1) {
-                                top: -15px;
-                                transition: top 0.3s ease-in-out;
-                            }
-                        }
-                    }
+                    // // when open and hover
+                    // &:hover {
+                    //     .figcaption {
+                    //         span:nth-child(1) {
+                    //             top: -15px;
+                    //             transition: top 0.3s ease-in-out;
+                    //         }
+                    //     }
+                    // }
                 }
             }
         }
