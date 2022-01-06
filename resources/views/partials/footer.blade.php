@@ -18,7 +18,7 @@
                 </a>
             </li>
             <li>
-                <a href="whatsapp://send" data-text="Dai uno sguardo a questo post:" target="_blank">
+                <a href="https://wa.me/+393297971583?text=Ciao%20Simone,%20ti%20contatto%20dal%20sito%20web" target="_blank">
                     <img src="{{asset('storage/whatsapp_icon.png')}}" alt="whatsapp">
                 </a>
             </li>
