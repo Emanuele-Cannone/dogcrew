@@ -9,7 +9,7 @@
       <!-- First container -->
       <div class="welcome_container container_solid">
         <div class="title_wrapper">
-          <h1 class="text-capitalize">dog crew asd++</h1>
+          <h1 class="text-capitalize">dog crew asd</h1>
         </div>
       </div>
 
@@ -21,7 +21,7 @@
 
     {{-- logo --}}
     <div class="d-flex justify-content-center logo_section">
-      <img src="{{asset('storage/logoDogCrew.jpg')}}" alt="Logo">
+      <img src="{{asset('images/logoDogCrew.jpg')}}" alt="Logo">
     </div>
 
     <section class="description">
