@@ -9,7 +9,7 @@
       <!-- First container -->
       <div class="welcome_container container_solid">
         <div class="title_wrapper">
-          <h1 class="text-capitalize">dog crew asd++++</h1>
+          <h1 class="text-capitalize">dog crew asd++++++++</h1>
         </div>
       </div>
 
