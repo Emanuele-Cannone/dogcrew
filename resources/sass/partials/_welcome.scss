@@ -72,7 +72,7 @@
         .container_image {
             /* Grab a free image from unsplash */
             background-image: url($logo);
-            background-attachment: fixed;
+            // background-attachment: fixed;
             background-position: right;
             background-size: cover;
             background-repeat: no-repeat;

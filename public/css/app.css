@@ -11394,7 +11394,6 @@ footer .footer_container ul li a {
 #welcomePage section.header .container_image {
   /* Grab a free image from unsplash */
   background-image: url(/images/landing.jpg?ae1b9f284e61ca61f39483e8ae104c74);
-  background-attachment: fixed;
   background-position: right;
   background-size: cover;
   background-repeat: no-repeat;
