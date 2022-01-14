@@ -2,7 +2,7 @@
 @section('title')
 @section('content')
 
-  <div id="welcomePage">
+  <div id="welcomePage" class="mt_120">
 
     <section class="header">
 
@@ -51,6 +51,9 @@
               <p>
                 Tanti nuovi spunti su cui riflettere, tempo, pazienza e il continuo mettersi in gioco anche nei momenti più difficili sono il segreto per migliorarsi e riuscire a vedersi allo specchio per come si è realmente!
               </p>
+              <p class="d-flex justify-content-center mt-4">
+                <a href="{{ url('atWorking') }}" class="btn btn_green text-capitalize">entra</a> 
+              </p>
             </span>
           </div>
           
@@ -71,6 +74,9 @@
               </p>
               <p>
                 Attività come il dog trekking se ben organizzate e studiate possono essere dei momenti costruttivi per tutti,di quelli che possono lasciare il segno!
+              </p>
+              <p class="d-flex justify-content-center mt-4">
+                <a href="{{ url('atWorking') }}" class="btn btn_green text-capitalize">entra</a> 
               </p>
             </span>
           </div>
@@ -93,6 +99,9 @@
               <p>
                 Due giorni dove andremo ad osservare, analizzare, aggiungere, togliere, guidare i rami della vostra crescita. Un nuovo modo di vedere la nostra relazione insieme a loro, i protagonisti di ogni iniziativa che intraprendiamo... i cani!
               </p>
+              <p class="d-flex justify-content-center mt-4">
+                <a href="{{ url('atWorking') }}" class="btn btn_green text-capitalize">entra</a> 
+              </p>
             </span>
           </div>
           
@@ -114,6 +123,9 @@
               <p>
                 Qui troverete consigli e spunti derivanti dall'esperienza e dal volermi mettere in gioco ogni giorno! 
               </p>
+              <p class="d-flex justify-content-center mt-4">
+                <a href="{{ url('guest/blog') }}" class="btn btn_green text-capitalize">entra</a> 
+              </p>
             </span>
           </div>
           
@@ -123,6 +135,7 @@
 
     </section>
   
-  <script src="{{ asset('js/welcome.js') }}"></script>
+    <script src="{{ asset('js/welcome.js') }}"></script>
+  </div>
 
 @endsection

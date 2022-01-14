@@ -1,10 +1,10 @@
 <header>
-    <nav class="navbar navbar-light fixed-top mb-5">
+    <nav class="navbar navbar-light">
       <div class="container-fluid">
         <a class="navbar-brand" href="{{ url('/') }}">
             <img src="{{asset('storage/logoDogCrew.jpg')}}" alt="Logo">
         </a>
-        <button id="menuBtn" class="navbar-toggler d-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+        <button id="menuBtn" class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
@@ -27,11 +27,28 @@
                 <a class="nav-link text-capitalize" href="#">seminari</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link text-capitalize" href="#">blog</a>
+                @auth   
+                <a class="nav-link text-capitalize" href="{{route('post.index')}}">blog</a>
+                @endauth
+                @guest
+                  <a class="nav-link text-capitalize" href="{{ url('guest/blog') }}">blog</a>
+                @endguest
               </li>
+              @guest
               <li class="nav-item">
-                <a class="nav-link text-capitalize" href="#">shop</a>
+                <a class="nav-link text-capitalize" href="{{route('login')}}">login</a>
               </li>
+              @endguest
+              @auth
+              <li>
+                <a class="nav-link text-capitalize" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                  {{ __('Logout') }}
+                </a>
+                <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                  @csrf
+                </form>
+              </li>
+              @endauth
             </ul>
           </div>
         </div>

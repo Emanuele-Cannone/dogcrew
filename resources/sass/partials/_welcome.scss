@@ -131,6 +131,14 @@
         font-family: "Poppins", sans-serif;
         transition: all 1s cubic-bezier(.59,-0.43,.17,1.16);
 
+        a.btn_green{
+            background-color: #D0E3CC;
+        }
+
+        a.btn{
+            padding: 10px 20px;
+            font-size: 1.1em;
+        }
 
         // section img
 
@@ -153,6 +161,8 @@
             &.open .figcaption span:nth-child(1) {
                 top: -26px; 
             }
+
+
         }
 
         .events .figure{
@@ -194,7 +204,7 @@
                 }
 
                 span.last_description{
-                    padding: 20px;
+                    padding: 30px 20px;
                 }
             }
 
@@ -243,7 +253,6 @@
                 box-shadow: 3px 3px 40px 0 rgba(0, 0, 0, 0.4);
                 border-radius: 8px;
                 position: relative;
-                pointer-events: none;
                 background: #ecf0f1;
                 transition: 0.3s ease-in-out;
 
@@ -343,7 +352,7 @@
                     }
 
                     &:before {
-                        content: "more";
+                        content: "scopri";
                         position: absolute;
                         top: 8px;
                         left: 44px;
@@ -351,7 +360,7 @@
                         transition: all 1s cubic-bezier(0.55, -0.62, 0.27, 1.2);
                     }
                     &:after {
-                        content: "back";
+                        content: "torna";
                         opacity: 0;
                         top: 8px;
                         left: 0;
@@ -367,7 +376,7 @@
                         height: 0;
                     }
                     .figcaption {
-                        height: 280px;
+                        height: 380px;
                         border-radius: 8px;
 
                         span {

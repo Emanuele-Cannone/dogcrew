@@ -1,5 +1,8 @@
 <?php
 
+use App\Http\Controllers\WelcomeController;
+use App\Http\Controllers\User\PostController;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,10 +20,30 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/bello', function () {
-    return view('bello');
+Route::get('/home', function () {
+    return view('home');
 });
 
-// Auth::routes();
 
-// Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/atWorking', function () {
+    return view('atWorking');
+});
+
+
+Route::get('/guest/blog', [WelcomeController::class, 'index']);
+
+Route::get('/guest/blog/{post}', [WelcomeController::class, 'show']);
+
+
+Auth::routes();
+
+Route::prefix('user')
+->middleware('auth')
+->group(function () {
+
+    Route::resource('/post', PostController::class);
+});
+
+
+
+// FAI IL CONTROLLER DEL BLOG PER VEDERE LA PAGINA DI INDEX

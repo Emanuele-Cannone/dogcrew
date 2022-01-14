@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Image;
+use App\Models\Post;
 use Illuminate\Http\Request;
 
 class WelcomeController extends Controller
@@ -13,7 +15,14 @@ class WelcomeController extends Controller
      */
     public function index()
     {
-        //
+        $posts = Post::all();
+
+        $data = [
+            'posts' => $posts
+        ];
+
+        return view('guest.blog.index', $data);
+    
     }
 
     /**
@@ -43,9 +52,16 @@ class WelcomeController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Post $post)
     {
-        //
+        $images = Image::where('post_id', $post->id)->get();
+
+        $data = [
+            'post' => $post,
+            'images' => $images
+        ];
+
+        return view('guest.blog.show', $data);
     }
 
     /**

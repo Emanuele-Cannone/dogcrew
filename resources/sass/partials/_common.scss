@@ -6,7 +6,37 @@
     font-family: 'Ubuntu', sans-serif;
 }
 
+.m_120_0 {
+  margin: 120px 0px;
+}
 
 .mt_120{
     margin-top: 120px;
+}
+
+.m_tb_40{
+    margin: 40px auto;
+}
+
+
+.m_tb_80{
+    margin: 80px auto;
+}
+
+@mixin m_tb_10 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+
+
+#text_post_white{
+    color: #f2f3fd;
+}
+
+
+#atWorking{
+    img{
+        width: inherit;
+    }
 }

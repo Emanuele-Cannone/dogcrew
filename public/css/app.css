@@ -11289,8 +11289,28 @@ textarea.form-control-lg {
   font-family: "Ubuntu", sans-serif;
 }
 
+.m_120_0 {
+  margin: 120px 0px;
+}
+
 .mt_120 {
   margin-top: 120px;
+}
+
+.m_tb_40 {
+  margin: 40px auto;
+}
+
+.m_tb_80 {
+  margin: 80px auto;
+}
+
+#text_post_white {
+  color: #f2f3fd;
+}
+
+#atWorking img {
+  width: inherit;
 }
 
 header a.navbar-brand img {
@@ -11434,6 +11454,13 @@ footer .footer_container ul li a {
   font-family: "Poppins", sans-serif;
   transition: all 1s cubic-bezier(0.59, -0.43, 0.17, 1.16);
 }
+#welcomePage section.card_container a.btn_green {
+  background-color: #D0E3CC;
+}
+#welcomePage section.card_container a.btn {
+  padding: 10px 20px;
+  font-size: 1.1em;
+}
 #welcomePage section.card_container .comunication .figure .img {
   background: url(/images/classi_comunicazione_home.jpg?a069437cf65d47d0844e545dad58b403);
 }
@@ -11466,7 +11493,7 @@ footer .footer_container ul li a {
   top: -34px;
 }
 #welcomePage section.card_container .workshops .figure .figcaption span.last_description {
-  padding: 20px;
+  padding: 30px 20px;
 }
 #welcomePage section.card_container .workshops .figure.open .figcaption span:nth-child(1) {
   top: -34px;
@@ -11497,7 +11524,6 @@ footer .footer_container ul li a {
   box-shadow: 3px 3px 40px 0 rgba(0, 0, 0, 0.4);
   border-radius: 8px;
   position: relative;
-  pointer-events: none;
   background: #ecf0f1;
   transition: 0.3s ease-in-out;
 }
@@ -11616,7 +11642,7 @@ footer .footer_container ul li a {
 #welcomePage section.card_container .events .figure button:before,
 #welcomePage section.card_container .workshops .figure button:before,
 #welcomePage section.card_container .blog .figure button:before {
-  content: "more";
+  content: "scopri";
   position: absolute;
   top: 8px;
   left: 44px;
@@ -11627,7 +11653,7 @@ footer .footer_container ul li a {
 #welcomePage section.card_container .events .figure button:after,
 #welcomePage section.card_container .workshops .figure button:after,
 #welcomePage section.card_container .blog .figure button:after {
-  content: "back";
+  content: "torna";
   opacity: 0;
   top: 8px;
   left: 0;
@@ -11644,7 +11670,7 @@ footer .footer_container ul li a {
 #welcomePage section.card_container .events .figure.open .figcaption,
 #welcomePage section.card_container .workshops .figure.open .figcaption,
 #welcomePage section.card_container .blog .figure.open .figcaption {
-  height: 280px;
+  height: 380px;
   border-radius: 8px;
 }
 #welcomePage section.card_container .comunication .figure.open .figcaption span:nth-child(2),
@@ -11673,4 +11699,249 @@ footer .footer_container ul li a {
 #welcomePage section.card_container .blog .figure.open button:after {
   opacity: 1;
   left: 47px;
+}
+
+#createPost textarea,
+#editPost textarea {
+  resize: none;
+  width: 100%;
+}
+#createPost .form-group,
+#editPost .form-group {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+#createPost .file_manager,
+#createPost button,
+#editPost .file_manager,
+#editPost button {
+  margin-top: 40px !important;
+}
+#createPost button,
+#editPost button {
+  margin: auto;
+  display: flex;
+}
+#createPost #editor,
+#editPost #editor {
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+}
+#createPost small, #createPost .small,
+#editPost small,
+#editPost .small {
+  font-size: 0.8em;
+  color: #ced4da;
+  padding-left: 2px;
+}
+#createPost input.form-control-file,
+#editPost input.form-control-file {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 100%;
+}
+
+#editPost {
+  /* Hide the browser's default checkbox */
+  /* Create a custom checkbox */
+  /* When the checkbox is checked, add a red background */
+  /* Create the checkmark/indicator (hidden when not checked) */
+  /* Show the checkmark when checked */
+  /* Style the checkmark/indicator */
+}
+#editPost img {
+  width: 100%;
+  margin: 10px 0px;
+}
+#editPost .container_checkbox {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+#editPost .container_checkbox input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+#editPost .checkmark {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+  border-radius: 50%;
+  margin-left: 10px;
+}
+#editPost .container_checkbox input:checked ~ .checkmark {
+  background-color: #ff0404;
+}
+#editPost .checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+#editPost .container_checkbox input:checked ~ .checkmark:after {
+  display: block;
+}
+#editPost .container_checkbox .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
+}
+
+#indexPost .card_custom,
+#showPost .card_custom {
+  border-radius: 15px;
+  margin: auto;
+  padding: 10px;
+}
+#indexPost .card_custom img,
+#showPost .card_custom img {
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+#blog .card {
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  margin-bottom: 30px;
+  border-radius: 6px;
+  color: #fff;
+  background-image: linear-gradient(to top, #09203fd4 0%, #5378958a 100%);
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+}
+#blog .card .card-image {
+  height: 60%;
+  position: relative;
+  overflow: hidden;
+  margin-left: 15px;
+  margin-right: 15px;
+  margin-top: -30px;
+  border-radius: 6px;
+  box-shadow: 0 16px 38px -12px rgba(0, 0, 0, 0.56), 0 4px 25px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
+}
+#blog .card .card-image img {
+  width: 100%;
+  height: 100%;
+  border-radius: 6px;
+  pointer-events: none;
+}
+#blog .card .card-image .card-caption {
+  position: absolute;
+  bottom: 15px;
+  color: #f3feff;
+  font-size: 2.3em;
+  text-shadow: 0 2px 5px rgba(33, 33, 33, 0.5);
+  width: 100%;
+}
+#blog .card img {
+  width: 100%;
+  height: auto;
+}
+#blog .img-raised {
+  box-shadow: 0 16px 38px -12px rgba(0, 0, 0, 0.56), 0 4px 25px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
+}
+#blog .card .ftr {
+  margin-top: 15px;
+}
+#blog .card .ftr div {
+  display: inline-block;
+}
+#blog .card .ftr .author {
+  color: #888;
+}
+#blog .card .ftr .stats {
+  float: right;
+  line-height: 30px;
+}
+#blog .card .ftr .stats {
+  position: relative;
+  top: 1px;
+  font-size: 14px;
+}
+#blog .table {
+  margin-bottom: 0px;
+}
+#blog .card .table {
+  padding: 15px 30px;
+}
+#blog .card .table-primary {
+  background: linear-gradient(60deg, #ab47bc, #7b1fa2);
+}
+#blog .card .table-info {
+  background: linear-gradient(60deg, #26c6da, #0097a7);
+}
+#blog .card .table-success {
+  background: linear-gradient(60deg, #66bb6a, #388e3c);
+}
+#blog .card .table-warning {
+  background: linear-gradient(60deg, #ffa726, #f57c00);
+}
+#blog .card .table-danger {
+  background: linear-gradient(60deg, #ef5350, #d32f2f);
+}
+#blog .card .table-rose {
+  background: linear-gradient(60deg, #ec407a, #c2185b);
+}
+#blog .card [class*=table-] {
+  color: #FFFFFF;
+  border-radius: 6px;
+}
+#blog .card [class*=table-] .card-caption a,
+#blog .card [class*=table-] .card-caption,
+#blog .card [class*=table-] .icon i {
+  color: #FFFFFF;
+}
+#blog .card [class*=table-] .icon i {
+  border-color: rgba(255, 255, 255, 0.25);
+}
+#blog .card [class*=table-] .author a,
+#blog .card [class*=table-] .ftr .stats,
+#blog .card [class*=table-] .category,
+#blog .card [class*=table-] .card-description {
+  color: #f2f3fd;
+}
+#blog .card [class*=table-] .author a:hover,
+#blog .card [class*=table-] .author a:focus,
+#blog .card [class*=table-] .author a:active {
+  color: #FFFFFF;
+}
+#blog .card [class*=table-] h1 small, #blog .card [class*=table-] .h1 small, #blog .card [class*=table-] h1 .small, #blog .card [class*=table-] .h1 .small,
+#blog .card [class*=table-] h2 small,
+#blog .card [class*=table-] .h2 small,
+#blog .card [class*=table-] h2 .small,
+#blog .card [class*=table-] .h2 .small,
+#blog .card [class*=table-] h3 small,
+#blog .card [class*=table-] .h3 small,
+#blog .card [class*=table-] h3 .small,
+#blog .card [class*=table-] .h3 .small {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+#blogShow {
+  background-image: linear-gradient(to top, #09203fd4 0%, #5378958a 100%);
+  padding-top: 30px;
+}
+#blogShow .images {
+  border-radius: 10px;
+}
+#blogShow .images img {
+  width: 100%;
+  border-radius: 10px;
 }

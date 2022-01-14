@@ -1,4 +1,6 @@
 $("header").addClass('d-none');
+$("header").addClass('fixed-top');
+$(".navbar").addClass('mb-5');
 $('button#menuBtn').addClass('d-none');
 
 
