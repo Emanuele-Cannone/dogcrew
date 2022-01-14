@@ -21,7 +21,7 @@ class PostController extends Controller
     public function index()
     {
 
-        $posts = Post::all();
+        $posts = Post::all()->sortDesc();
 
         $data = [
             'posts' => $posts
