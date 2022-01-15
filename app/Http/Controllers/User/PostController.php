@@ -106,7 +106,7 @@ class PostController extends Controller
      */
     public function edit(Post $post)
     {
-        $images = Image::where('post_id', $post->id)->get()->toArray();
+        $images = Image::where('post_id', $post->id)->get();
 
 
         $data = [
