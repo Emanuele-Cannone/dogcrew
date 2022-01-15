@@ -53,7 +53,7 @@
                   @csrf
                   @method('delete')
                   <div class="form-group">
-                      <input class="btn btn-danger" value="Elimina Post" type="submit">
+                      <input style="appearance: button;" class="btn btn-danger" value="Elimina Post" type="submit">
                   </div>
                 </form>
             </div>
