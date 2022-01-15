@@ -23,7 +23,7 @@
               <h5 class="card-title">{{ $post->title }}</h5>
               <p class="card-text">
                 <p class="">{{ $post->small }}</p>
-                <p class="" style="word-break: break-all; white-space: normal;">{{ strip_tags($post->body) }}</p>
+                <p class="">{!! html_entity_decode($post->body) !!}</p>
               </p>
               <div class="d-flex justify-content-around">
                 <a href="{{route('post.edit', $post->id)}}" class="btn btn-warning text-capitalize">modifica post</a>
