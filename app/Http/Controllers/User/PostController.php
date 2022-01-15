@@ -59,7 +59,7 @@ class PostController extends Controller
         
         $newPost->title = $data['title'];
         $newPost->small = $data['small'];
-        $newPost->body = $data['body'];
+        $newPost->body =  $data['body'];
         $newPost->cover_image = $data['cover_image'];
         $newPost->save();
 
@@ -106,7 +106,7 @@ class PostController extends Controller
      */
     public function edit(Post $post)
     {
-        $images = Image::all();
+        $images = Image::where('post_id', $post->id)->get()->toArray();
 
 
         $data = [

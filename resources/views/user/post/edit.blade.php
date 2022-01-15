@@ -3,7 +3,7 @@
 @section('title')
 
 @section('script')
-  {{-- <script src="{{ asset('js/post.js') }}"></script> --}}
+  <script src="{{ asset('js/post.js') }}"></script>
 @endsection
 
 @section('cdn')

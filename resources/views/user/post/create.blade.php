@@ -3,7 +3,7 @@
 @section('title')
 
 @section('script')
-  {{-- <script src="{{ asset('js/post.js') }}"></script> --}}
+  <script src="{{ asset('js/post.js') }}"></script>
 @endsection
 
 @section('cdn')
@@ -24,6 +24,7 @@
               @csrf
               @method('POST')
 
+              
               <div class="form-group row">
                 <div class="col-md-12">
                   <input type="text" class="form-control" name="title" placeholder="Inserisci titolo">
@@ -40,6 +41,7 @@
 
               <div class="form-group row">
                 <div class="col-md-12">
+                  
                   <textarea name="body" class="form-control" rows="10" placeholder="Inserisci post"></textarea>
                   <small>* campo obbligatorio</small>
                 </div>

@@ -23,7 +23,7 @@
               <h5 class="card-title">{{ $post->title }}</h5>
               <p class="card-text">
                 <p class="">{{ $post->small }}</p>
-                <p class="">{{ $post->body }}</p>
+                <p class="" style="word-break: break-all; white-space: normal;">{{ strip_tags($post->body) }}</p>
               </p>
               <div class="d-flex justify-content-around">
                 <a href="{{route('post.edit', $post->id)}}" class="btn btn-warning text-capitalize">modifica post</a>
@@ -42,7 +42,7 @@
         <div class="modal-dialog">
           <div class="modal-content">
             <div class="modal-header">
-              <h5 class="modal-title text-capitalize" id="delete_post">elimina post "{{ $post->title }}"</h5>
+              <h5 class="modal-title text-capitalize" id="delete_post">eliminazione post "{{ $post->title }}"</h5>
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
