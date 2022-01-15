@@ -42,7 +42,7 @@
               <div class="form-group row">
                 <div class="col-md-12">
                   
-                  <textarea name="body" class="form-control" rows="10" placeholder="Inserisci post"></textarea>
+                  <textarea v-model="textarea" name="body" class="form-control" rows="10" placeholder="Inserisci post" v-on:keyup.enter="addBr()"></textarea>
                   <small>* campo obbligatorio</small>
                 </div>
               </div>
