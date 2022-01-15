@@ -9,7 +9,7 @@ var app = new Vue({
         addBr(){
             console.log('br');
             console.log(this.textarea);
-            this.textarea += '<br>'; 
+            this.textarea += '<br><br>'; 
         }
 
     },
