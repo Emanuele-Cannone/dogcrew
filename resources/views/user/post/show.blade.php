@@ -27,7 +27,7 @@
               </p>
               <div class="d-flex justify-content-around">
                 <a href="{{route('post.edit', $post->id)}}" class="btn btn-warning text-capitalize">modifica post</a>
-                <a type="button" class="btn btn-danger text-capitalize" data-bs-toggle="modal" data-bs-target="#deletePost">elimina post</a>
+                <a class="btn btn-danger text-capitalize" data-bs-toggle="modal" data-bs-target="#deletePost">elimina post</a>
               </div>
             </div>
           </div>
