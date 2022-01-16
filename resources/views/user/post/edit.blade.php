@@ -48,7 +48,7 @@
 
               <div class="form-group row">
                 <div class="col-md-12">
-                    <textarea v-on:keyup.enter="addBr()" v-model="textarea" name="body" class="form-control" rows="10" placeholder="Inserisci post">{{$post->body}}</textarea>
+                    <textarea name="body" class="form-control" rows="10" placeholder="Inserisci post">{{ $post->body }}</textarea>
                   <small>* campo obbligatorio</small>
                 </div>
               </div>

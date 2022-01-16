@@ -17,7 +17,7 @@
 
     <div class="bg_image mb-5">
       <h1 class="text-center mb-3">{{ $post->title }}</h1>
-      <p>{!! html_entity_decode($post->body) !!}</p>
+      <p>{!! nl2br($post->body) !!}</p>
     </div>
 
     <div class="images">

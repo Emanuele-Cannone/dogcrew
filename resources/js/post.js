@@ -7,7 +7,7 @@ var app = new Vue({
     methods: {
 
         addBr(){
-            this.textarea += '<br><br>'; 
+            
         }
 
     },
