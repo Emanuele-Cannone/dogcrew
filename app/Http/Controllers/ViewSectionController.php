@@ -12,7 +12,7 @@ class ViewSectionController extends Controller
     public function index(Section $section)
     {
 
-        $posts = Post::where('section_id', $section->id)->get();
+        $posts = Post::where('section_id', $section->id)->get()->sortDesc();
 
         $data = [
             'posts' => $posts,
