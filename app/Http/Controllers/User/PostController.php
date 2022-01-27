@@ -5,7 +5,7 @@ namespace App\Http\Controllers\User;
 use App\Http\Controllers\Controller;
 use App\Models\Image;
 use App\Models\Post;
-use App\User;
+use App\Models\Section;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -16,15 +16,25 @@ class PostController extends Controller
     /**
      * Display a listing of the resource.
      *
+     * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
 
-        $posts = Post::all()->sortDesc();
+        $sections = Section::all();
+        $section_selected = $request['section'];
+        
+        if($section_selected == 'all' || !$section_selected){
+            $posts = Post::all()->sortDesc();
+        } else {
+            $posts = Post::where('section_id', $section_selected)->get()->sortDesc();
+        };
 
         $data = [
-            'posts' => $posts
+            'posts' => $posts,
+            'sections' => $sections,
+            'section_selected' => $section_selected
         ];
 
         return view('user.post.index', $data);
@@ -38,7 +48,14 @@ class PostController extends Controller
      */
     public function create()
     {
-        return view('user.post.create');
+
+        $sections = Section::all();
+
+        $data = [
+            'sections' => $sections
+        ];
+
+        return view('user.post.create', $data);
     }
 
     /**
@@ -60,6 +77,7 @@ class PostController extends Controller
         $newPost->title = $data['title'];
         $newPost->small = $data['small'];
         $newPost->body =  $data['body'];
+        $newPost->section_id =  $data['section_id'];
         $newPost->cover_image = $data['cover_image'];
         $newPost->save();
 
@@ -128,6 +146,12 @@ class PostController extends Controller
     public function update(Request $request, Post $post)
     {
         $data = $request->all();
+
+        if(isset($data['cover_image'])){
+            $file = $data['cover_image'];
+            $storage_path = Storage::put('post_images', $file);
+            $data['cover_image'] = $storage_path;
+        }
 
 
         if(isset($data['image'])){

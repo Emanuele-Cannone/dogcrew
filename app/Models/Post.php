@@ -20,4 +20,10 @@ class Post extends Model
     {
         return $this->hasMany("App\Image");
     }
+
+    public function section()
+    {
+        return $this->hasOne("App\Section");
+    }
+
 }

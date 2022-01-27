@@ -1,3 +1,8 @@
+@php
+  use App\Models\Section;
+  $sections = Section::all();
+@endphp
+
 <header>
     <nav class="navbar navbar-light">
       <div class="container-fluid">
@@ -17,29 +22,22 @@
               <li class="nav-item">
                 <a class="nav-link active" aria-current="page" href="{{ url('/') }}">Home</a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link text-capitalize" href="#">eventi</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link text-capitalize" href="#">classi di comunicazione</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link text-capitalize" href="#">seminari</a>
-              </li>
-              <li class="nav-item">
-                @auth   
-                <a class="nav-link text-capitalize" href="{{route('post.index')}}">blog</a>
-                @endauth
-                @guest
-                  <a class="nav-link text-capitalize" href="{{ url('guest/blog') }}">blog</a>
-                @endguest
-              </li>
               @guest
+              @foreach ($sections as $section)
+                <li class="nav-item">
+                  {{-- <a class="nav-link text-capitalize" href="{{ route( $section->url ) }}">{{ $section->name }}</a> --}}
+                  <a class="nav-link text-capitalize" href="{{ route('sections', $section->id) }}">{{ $section->name }}</a>
+                </li>
+              @endforeach
               <li class="nav-item">
                 <a class="nav-link text-capitalize" href="{{route('login')}}">login</a>
               </li>
               @endguest
               @auth
+              <li class="nav-item">
+                {{-- <a class="nav-link text-capitalize" href="{{ route( $section->url ) }}">{{ $section->name }}</a> --}}
+                <a class="nav-link text-capitalize" href="{{ route('post.index') }}">Post</a>
+              </li>
               <li>
                 <a class="nav-link text-capitalize" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
                   {{ __('Logout') }}

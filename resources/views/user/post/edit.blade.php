@@ -14,7 +14,7 @@
   <div class="container">
     <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
       <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a href="#">Home</a></li>
+        <li class="breadcrumb-item"><a href="{{ url('/home') }}">Home</a></li>
         <li class="breadcrumb-item"><a href="{{ route('post.index') }}">Posts</a></li>
         <li class="breadcrumb-item"><a href="{{ route('post.show', $post->id) }}" class="text-capitalize">{{ $post->title }}</a></li>
         <li class="breadcrumb-item active" aria-current="page">Modifica "{{ $post->title }}"</li>

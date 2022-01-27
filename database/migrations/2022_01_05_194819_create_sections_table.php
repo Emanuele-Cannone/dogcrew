@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class Small extends Migration
+class CreateSectionsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,13 @@ class Small extends Migration
      */
     public function up()
     {
-        Schema::table('posts', function (Blueprint $table) {
-            $table->string('small');
+        Schema::create('sections', function (Blueprint $table) {
+            $table->id();
+            $table->string('name');
+            $table->text('title');
+            $table->string('cover_image')->nullable();
+            $table->string('url');
+            $table->timestamps();
         });
     }
 
@@ -25,9 +30,6 @@ class Small extends Migration
      */
     public function down()
     {
-        Schema::table('posts', function (Blueprint $table) {
-            
-            $table->dropColumn("small")->unique();
-        });
+        Schema::dropIfExists('sections');
     }
 }

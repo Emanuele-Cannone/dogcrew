@@ -24,6 +24,16 @@
               @csrf
               @method('POST')
 
+              <div class="col-md-3 mb-3">
+                <label for="validationTooltip04">Sezione</label>
+                <select class="form-select text-capitalize" id="validationTooltip04" name="section_id" required aria-label="Default select example">
+                  <option selected disabled value="0">Scegli Sezione</option>
+                  @foreach ($sections as $section)
+                      <option value="{{ $section->id }}">{{ $section->name }}</option>
+                  @endforeach
+                </select>
+              </div>
+
               
               <div class="form-group row">
                 <div class="col-md-12">

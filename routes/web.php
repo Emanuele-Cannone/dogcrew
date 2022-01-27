@@ -2,6 +2,8 @@
 
 use App\Http\Controllers\WelcomeController;
 use App\Http\Controllers\User\PostController;
+use App\Http\Controllers\ViewSectionController;
+use App\Models\Section;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -29,10 +31,8 @@ Route::get('/atWorking', function () {
     return view('atWorking');
 });
 
-
-Route::get('/guest/blog', [WelcomeController::class, 'index']);
-
-Route::get('/guest/blog/{post}', [WelcomeController::class, 'show']);
+Route::get('/guest/sections/{section}', [ViewSectionController::class, 'index'])->name('sections');
+Route::get('/guest/sections/post/{post}', [ViewSectionController::class, 'show']);
 
 
 Auth::routes();

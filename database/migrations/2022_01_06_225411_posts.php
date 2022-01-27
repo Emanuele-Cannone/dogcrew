@@ -15,7 +15,9 @@ class Posts extends Migration
     {
         Schema::create('posts', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('section_id');
             $table->string('title')->unique();
+            $table->string('small');
             $table->longText('body');
             $table->string('cover_image');
             $table->timestamps();
