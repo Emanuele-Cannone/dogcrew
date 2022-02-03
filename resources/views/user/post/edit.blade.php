@@ -71,7 +71,7 @@
                   <div class="d-flex flex-column">
                     @foreach ($images as $k => $image)
                     <div class="d-flex checkbox">
-                      <img src="{{ asset('storage/' .$image->src) }}" alt="immagine_{{ ++$k }}">
+                      <img src="{{ asset('storage/' .$image->src) }}" alt="immagine_{{ ++$k }}" style="height: 100%; width: 90%;">
                       <label class="container_checkbox">
                         <input type="checkbox" class="deleteImages" name="deleteImg[]" value="{{ $image->id }}">
                         <span class="checkmark"></span>
