@@ -7,6 +7,7 @@
 @endsection
 
 @section('cdn')
+
 @endsection
 
 @section('content')
@@ -69,10 +70,10 @@
 
               <div class="form-group row file_manager">
                 <div class="col-md-12">
-                <label for="image">Inserisci link video</label>
-                <input type="text" class="form-control-file" id="video" name="video">
-                </div>
+                <label for="image">Inserisci key video youtube</label>
+                <input type="text" class="form-control-file" id="video" name="video" placeholder="Es. ...youtu.be/KEY">
               </div>
+            </div>
 
               <div class="form-group row file_manager">
                 <div class="col-md-12">
