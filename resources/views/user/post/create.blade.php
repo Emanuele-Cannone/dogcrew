@@ -70,7 +70,7 @@
 
               <div class="form-group row file_manager">
                 <div class="col-md-12">
-                <label for="image">Inserisci key video youtube</label>
+                <label for="video">Inserisci key video youtube</label>
                 <input type="text" class="form-control-file" id="video" name="video" placeholder="Es. ...youtu.be/KEY">
               </div>
             </div>
