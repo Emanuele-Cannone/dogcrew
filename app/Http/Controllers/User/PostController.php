@@ -79,6 +79,7 @@ class PostController extends Controller
         $newPost->body =  $data['body'];
         $newPost->section_id =  $data['section_id'];
         $newPost->cover_image = $data['cover_image'];
+        $newPost->video = $data['video'];
         $newPost->save();
 
         if (array_key_exists('images', $data)) {
@@ -164,6 +165,8 @@ class PostController extends Controller
         $post->title = $data['title'];
         $post->small = $data['small'];
         $post->body = $data['body'];
+        $post->video = $data['video'];
+
 
         $post->update($data);
 

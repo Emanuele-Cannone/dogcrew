@@ -53,9 +53,6 @@
                 </div>
               </div>
 
-
-              
-
               <div class="form-group row file_manager">
                 <div class="col-md-12">
                   <label for="image">Modifica immagine di copertina</label>
@@ -63,6 +60,26 @@
                   <img src="{{ asset('storage/' .$post->cover_image) }}" alt="immagine_di_copertina">
                 </div>
               </div>
+
+              <div class="form-group row file_manager">
+                <div class="col-md-12">
+                  @if ($post->video)
+                    <label for="video_exist">Modifica link video</label>
+                    <input type="text" class="form-control-file" id="video_exist" name="video" value="{{ $post->video }}">
+                  @else
+                    <label for="video">Inserisci link video</label>
+                    <input type="text" class="form-control-file" id="video" name="video">
+                  @endif
+                </div>
+              </div>
+
+              @if ($post->video)
+
+                <div class="d-flex justify-content-center pb-4">
+                  <iframe src="https://www.youtube.com/embed/<?php echo $post->video ?>?enablejsapi=0" frameborder="0" height="360"></iframe>
+                </div>
+
+              @endif
 
               <div class="form-group row file_manager">
                 <div class="col-md-12">

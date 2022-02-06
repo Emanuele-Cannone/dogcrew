@@ -20,6 +20,14 @@
       <p>{!! nl2br($post->body) !!}</p>
     </div>
 
+    @if ($post->video)
+
+      <div class="d-flex justify-content-center pb-4">
+        <iframe src="https://www.youtube.com/embed/<?php echo $post->video ?>?enablejsapi=0" frameborder="0" height="360"></iframe>
+      </div>
+
+    @endif
+
     <div class="images">
       @foreach ($images as $image)
         <img class="mb-5" src="{{  asset('storage/' .$image->src) }}">

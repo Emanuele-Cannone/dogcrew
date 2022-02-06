@@ -34,6 +34,9 @@
                 </select>
               </div>
 
+              {{-- <div id="editor">
+                <p>bello</p>
+              </div> --}}
               
               <div class="form-group row">
                 <div class="col-md-12">
@@ -45,22 +48,29 @@
               <div class="form-group row">
                 <div class="col-md-12">
                   <input type="text" class="form-control" name="small" placeholder="Inserisci sottotitolo">
-                  <small>* campo obbligatorio</small>
+                  <small></small>
                 </div>
               </div>
 
               <div class="form-group row">
                 <div class="col-md-12">
-                  
-                  <textarea v-model="textarea" name="body" class="form-control" rows="10" placeholder="Inserisci post" v-on:keyup.enter="addBr()"></textarea>
+                  <textarea name="body" class="form-control" rows="10" placeholder="Inserisci post"></textarea>
                   <small>* campo obbligatorio</small>
                 </div>
               </div>
+
 
               <div class="form-group row file_manager">
                 <div class="col-md-12">
                 <label for="image">Inserisci immagine di copertina</label>
                 <input type="file" class="form-control-file" id="image" name="cover_image">
+                </div>
+              </div>
+
+              <div class="form-group row file_manager">
+                <div class="col-md-12">
+                <label for="image">Inserisci link video</label>
+                <input type="text" class="form-control-file" id="video" name="video">
                 </div>
               </div>
 
@@ -73,6 +83,7 @@
 
               
               <button type="submit" class="btn btn-success text-capitalize">crea post</button>
+              {{-- <button v-on:click="myMethod()" class="btn btn-success text-capitalize">crea post</button> --}}
 
             </form>
           </div>
