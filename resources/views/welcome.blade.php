@@ -46,7 +46,7 @@
             <span class="title_wr">Classi di Comunicazione</span>
             <span>
               <p>
-                Comunicare non, è solo un dare e avere, è un filo sottile e fragile tra due individui.
+                Comunicare non è solo un dare e avere, è un filo sottile e fragile tra due individui.
               </p>
               <p>
                 Tanti nuovi spunti su cui riflettere, tempo, pazienza e il continuo mettersi in gioco anche nei momenti più difficili sono il segreto per migliorarsi e riuscire a vedersi allo specchio per come si è realmente!
